@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cl4ut5mckc1dd" path="res://scenes/world objects/ground.tscn" id="1_we81c"]
 [ext_resource type="PackedScene" uid="uid://d0mmdss13gwg" path="res://scenes/world objects/wall.tscn" id="2_sht86"]
 
-[node name="test_scene" type="Node2D"]
+[node name="winter" type="Node2D"]
 
 [node name="ground" parent="." instance=ExtResource("1_we81c")]
 position = Vector2(0, 25)

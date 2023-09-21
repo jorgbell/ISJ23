@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dx1idpca3lkyi" path="res://scenes/world objects/character.tscn" id="1_4i0j8"]
 [ext_resource type="PackedScene" uid="uid://cret7julf2y0l" path="res://scenes/ui/UI.tscn" id="1_k4q18"]
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_ub7n1"]
-[ext_resource type="PackedScene" uid="uid://cqfhnpb7xftpo" path="res://scenes/levels/DemoScene.tscn" id="2_1ftva"]
 [ext_resource type="PackedScene" uid="uid://dry3dae56dqwk" path="res://scenes/game/Managers/audioManager.tscn" id="4_mmpjd"]
+[ext_resource type="PackedScene" uid="uid://dysm14pe6407g" path="res://scenes/game/Managers/level_manager.tscn" id="5_u2kyl"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_ub7n1")
@@ -12,7 +12,7 @@ script = ExtResource("1_ub7n1")
 [node name="UI" parent="." instance=ExtResource("1_k4q18")]
 
 [node name="character" parent="." instance=ExtResource("1_4i0j8")]
-position = Vector2(-1036, -314)
+position = Vector2(-10, -640)
 
 [node name="Camera2D2" type="Camera2D" parent="character"]
 position = Vector2(30, -89)
@@ -20,7 +20,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 4.205
 drag_vertical_enabled = true
 
-[node name="test_scene" parent="." instance=ExtResource("2_1ftva")]
-
 [node name="audioManager" parent="." instance=ExtResource("4_mmpjd")]
 unique_name_in_owner = true
+
+[node name="LevelManager" parent="." instance=ExtResource("5_u2kyl")]
