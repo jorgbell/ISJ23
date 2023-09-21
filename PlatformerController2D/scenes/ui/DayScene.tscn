@@ -1,0 +1,104 @@
+[gd_scene load_steps=3 format=3 uid="uid://gl0p3ob41abi"]
+
+[ext_resource type="Script" path="res://scenes/ui/DayScript.cs" id="1_c4m3s"]
+[ext_resource type="Texture2D" uid="uid://d1qjj11j4s5x1" path="res://resources/egg.png" id="2_eyqxe"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_c4m3s")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 500
+
+[node name="Pollito" type="Panel" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer/Pollito"]
+texture = ExtResource("2_eyqxe")
+
+[node name="Eleccion" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Pollo1" type="HBoxContainer" parent="Control/MarginContainer/HBoxContainer/Eleccion"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Img1" type="Panel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo1"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo1/Img1"]
+
+[node name="Mod1" type="Panel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo1"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo1/Mod1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scroll_active = false
+scroll_following = true
+
+[node name="Desc1" type="Panel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo1"]
+layout_mode = 2
+
+[node name="Pollo2" type="HBoxContainer" parent="Control/MarginContainer/HBoxContainer/Eleccion"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Img2" type="Panel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo2"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo2/Img2"]
+
+[node name="Mod2" type="Panel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo2"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo2/Mod2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Desc2" type="Panel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo2"]
+layout_mode = 2
+
+[node name="Pollo3" type="HBoxContainer" parent="Control/MarginContainer/HBoxContainer/Eleccion"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Img3" type="Panel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo3"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo3/Img3"]
+
+[node name="Mod3" type="Panel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo3"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo3/Mod3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Desc3" type="Panel" parent="Control/MarginContainer/HBoxContainer/Eleccion/Pollo3"]
+layout_mode = 2
