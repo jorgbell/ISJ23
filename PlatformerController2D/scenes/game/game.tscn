@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ct5j0drrf3rx5"]
+[gd_scene load_steps=6 format=3 uid="uid://ct5j0drrf3rx5"]
 
 [ext_resource type="PackedScene" uid="uid://dx1idpca3lkyi" path="res://scenes/world objects/character.tscn" id="1_4i0j8"]
 [ext_resource type="PackedScene" uid="uid://cret7julf2y0l" path="res://scenes/ui/UI.tscn" id="1_k4q18"]
+[ext_resource type="Script" path="res://scenes/game/GameManager.cs" id="1_o527i"]
 [ext_resource type="PackedScene" uid="uid://cqfhnpb7xftpo" path="res://scenes/levels/_test/DemoScene.tscn" id="2_1ftva"]
+[ext_resource type="PackedScene" uid="uid://dry3dae56dqwk" path="res://scenes/game/audioManager.tscn" id="4_mmpjd"]
 
 [node name="game" type="Node2D"]
+script = ExtResource("1_o527i")
 
 [node name="UI" parent="." instance=ExtResource("1_k4q18")]
 
@@ -18,3 +21,6 @@ position_smoothing_speed = 4.205
 drag_vertical_enabled = true
 
 [node name="test_scene" parent="." instance=ExtResource("2_1ftva")]
+
+[node name="audioManager" parent="." instance=ExtResource("4_mmpjd")]
+unique_name_in_owner = true

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dry3dae56dqwk"]
+
+[ext_resource type="Script" path="res://scripts/audio_manager.cs" id="1_tk3tg"]
+[ext_resource type="AudioStream" uid="uid://2txf1nwvvp8j" path="res://audio/bgm/chopin.mp3" id="2_xites"]
+
+[node name="bgmAudio" type="Node"]
+script = ExtResource("1_tk3tg")
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_xites")
