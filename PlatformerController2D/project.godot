@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PlatformerController2D"
-run/main_scene="res://scenes/levels/DemoScene.tscn"
+run/main_scene="res://DemoScene.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
