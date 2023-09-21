@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://drqd2pcqbgd0h"]
+
+[ext_resource type="Texture2D" path="res://resources/egg.png" id="1_letx6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dfqwh"]
+radius = 2.45459
+height = 4.90919
+
+[node name="egg" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("1_letx6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(4.18, 5.29619)
+shape = SubResource("CapsuleShape2D_dfqwh")
