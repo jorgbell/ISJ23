@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://boxyvv8df5pfv"]
+
+[ext_resource type="PackedScene" uid="uid://cl4ut5mckc1dd" path="res://scenes/world objects/ground.tscn" id="1_dw2gt"]
+[ext_resource type="PackedScene" uid="uid://d0mmdss13gwg" path="res://scenes/world objects/wall.tscn" id="2_1v40q"]
+
+[node name="test_scene" type="Node2D"]
+
+[node name="ground" parent="." instance=ExtResource("1_dw2gt")]
+position = Vector2(0, 25)
+scale = Vector2(4.55, 2.13)
+
+[node name="ground2" parent="." instance=ExtResource("1_dw2gt")]
+position = Vector2(-202, -152)
+
+[node name="ground3" parent="." instance=ExtResource("1_dw2gt")]
+position = Vector2(-1484, -154)
+
+[node name="ground4" parent="." instance=ExtResource("1_dw2gt")]
+position = Vector2(1387, -146)
+
+[node name="ground4" parent="ground4" instance=ExtResource("1_dw2gt")]
+position = Vector2(-1595, -115)
+scale = Vector2(0.600001, 1)
+
+[node name="wall2" parent="." instance=ExtResource("2_1v40q")]
+position = Vector2(-2167, -349)
+
+[node name="wall3" parent="." instance=ExtResource("2_1v40q")]
+position = Vector2(2113, -349)

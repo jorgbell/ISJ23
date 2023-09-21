@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Huevos Estelares"
-run/main_scene="res://scenes/game/game.tscn"
+run/main_scene="res://scenes/game/main_menu.tscn"
 config/features=PackedStringArray("4.1", "C#")
 config/icon="res://icon.png"
+
+[autoload]
+
+GameManager="*res://scripts/GameManager.cs"
 
 [display]
 

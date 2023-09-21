@@ -17,7 +17,23 @@ public partial class audio_manager : Node
 	{
 	}
 	public void Play_BGM(){
-		if(!bgm.Playing) bgm.Play();
+		switch (GameManager.actualSeason)
+		{
+			case GameManager.SEASON.WINTER:
+					if(!bgm.Playing) bgm.Play();
+				break;
+			case GameManager.SEASON.SPRING:
+					if(!bgm.Playing) bgm.Play();
+				break;
+			case GameManager.SEASON.SUMMER:
+					if(!bgm.Playing) bgm.Play();
+				break;
+			case GameManager.SEASON.AUTUMN:
+					if(!bgm.Playing) bgm.Play();
+				break;
+			default:
+			break;
+		}
 	}
 	public void Stop_BGM(){
 		if(!bgm.Playing) bgm.Play();
