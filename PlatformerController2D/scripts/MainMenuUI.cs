@@ -17,4 +17,7 @@ public partial class MainMenuUI : CanvasLayer
 	public void OnClick(){
 		GetTree().ChangeSceneToFile("res://scenes/game/game.tscn");
 	}
+	public void GoToCredits(){
+		GetTree().ChangeSceneToFile("res://scenes/ui/credits.tscn");
+	}
 }

@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://1g76ff20ifs6"]
+[gd_scene load_steps=2 format=3 uid="uid://do50o6ocstkq3"]
 
-[ext_resource type="Script" path="res://scripts/MainMenuUI.cs" id="1_l0iks"]
+[ext_resource type="Script" path="res://scripts/MainMenuUI.cs" id="1_dullx"]
 
 [node name="MainMenuUI" type="CanvasLayer"]
-script = ExtResource("1_l0iks")
+script = ExtResource("1_dullx")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -37,13 +37,31 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 1.45
+text = "APOLLO 13 GAMES
+
+Programación y diseño: 
+
+Nuria Bango Iglesias
+Jorge Bello Martín
+Pablo Sánchez Martín
+-----------------------------------
+Arte:
+
+Victor José Guardia Jacinto
+----------------------------------
+Especial agradecimiento a:
+
+PlatformerController2D asset by evpevdev ; MIT
+A toda la organización del Indie Spain Jam e Indie Dev Day 
+por darnos la motivación de, aún en días complicados, 
+trastear con nuevas herramientas y divertirnos diseñando videojuegos <3"
+horizontal_alignment = 1
+
 [node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "PLAY DEMO! :)"
 
-[node name="Button2" type="Button" parent="Control/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Credits"
-
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Button" to="." method="OnClick"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Button2" to="." method="GoToCredits"]
