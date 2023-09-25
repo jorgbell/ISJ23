@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bycsx3ajg17j0"]
+
+[ext_resource type="PackedScene" uid="uid://d0mmdss13gwg" path="res://scenes/world objects/wall.tscn" id="1_t6omv"]
+[ext_resource type="PackedScene" uid="uid://cl4ut5mckc1dd" path="res://scenes/world objects/ground_winter.tscn" id="2_au4lg"]
+
+[node name="Level2" type="Node"]
+
+[node name="wall2" parent="." instance=ExtResource("1_t6omv")]
+position = Vector2(1760, -320)
+
+[node name="wall" parent="." instance=ExtResource("1_t6omv")]
+position = Vector2(-1821, -317)
+
+[node name="ground5" parent="." instance=ExtResource("2_au4lg")]
+position = Vector2(-1133, -105)
+scale = Vector2(0.2704, 1)
+
+[node name="ground4" parent="." instance=ExtResource("2_au4lg")]
+position = Vector2(686, -188)
+scale = Vector2(0.140608, 1)
+
+[node name="ground6" parent="." instance=ExtResource("2_au4lg")]
+position = Vector2(985, -95)
+scale = Vector2(0.140608, 1)
+
+[node name="ground2" parent="." instance=ExtResource("2_au4lg")]
+position = Vector2(0.015, -300)
+
+[node name="ground3" parent="." instance=ExtResource("2_au4lg")]
+position = Vector2(-698, -204)
+scale = Vector2(0.52, 1)
+
+[node name="ground" parent="." instance=ExtResource("2_au4lg")]
+position = Vector2(0.015, 77.335)
+scale = Vector2(3.52, 2.8)

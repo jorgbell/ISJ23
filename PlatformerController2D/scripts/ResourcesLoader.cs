@@ -1,30 +1,35 @@
 using Godot;
 using System;
+using System.Runtime.InteropServices;
 
 public partial class ResourcesLoader : Node
 {
-	public static PackedScene winterScene,springScene,summerScene,autumnScene;
-
+	public static int actualLevel = 1;
+	static PackedScene w1,w2,sp1,sp2, thanks;
 	public override void _EnterTree(){
-		winterScene = (PackedScene)ResourceLoader.Load("res://scenes/levels/winter.tscn");
-		springScene = (PackedScene)ResourceLoader.Load("res://scenes/levels/spring.tscn");
-		summerScene = (PackedScene)ResourceLoader.Load("res://scenes/levels/summer.tscn");
-		autumnScene = (PackedScene)ResourceLoader.Load("res://scenes/levels/autumn.tscn");
-	}
+		w1 = (PackedScene)ResourceLoader.Load("res://scenes/levels/winter/1.tscn");
+		w2 = (PackedScene)ResourceLoader.Load("res://scenes/levels/winter/2.tscn");
+		sp1 = (PackedScene)ResourceLoader.Load("res://scenes/levels/spring/1.tscn");
+		sp2 = (PackedScene)ResourceLoader.Load("res://scenes/levels/spring/2.tscn");
+		thanks = (PackedScene)ResourceLoader.Load("res://scenes/thanks.tscn");
 
-			
+	}
+	
 	public static PackedScene GetSceneToAdd(GameManager.SEASON actual){
 		switch (actual)
 		{
-			case GameManager.SEASON.AUTUMN:
-				return autumnScene;
-			case GameManager.SEASON.SPRING:
-				return springScene;
 			case GameManager.SEASON.WINTER:
-				return winterScene;
-			case GameManager.SEASON.SUMMER:
-				return summerScene;
+				if(actualLevel == 1)
+					return w1;
+				else
+					return w2;
+			case GameManager.SEASON.SPRING:
+				if(actualLevel == 1)
+					return sp1;
+				else
+					return sp2;
+			default:
+				return thanks;
 		}
-		return null;
 	}
 }

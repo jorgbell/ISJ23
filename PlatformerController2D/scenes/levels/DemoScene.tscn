@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqfhnpb7xftpo"]
 
-[ext_resource type="PackedScene" uid="uid://cl4ut5mckc1dd" path="res://scenes/world objects/ground.tscn" id="1_5rgfc"]
+[ext_resource type="PackedScene" uid="uid://cl4ut5mckc1dd" path="res://scenes/world objects/ground_winter.tscn" id="1_5rgfc"]
 [ext_resource type="PackedScene" uid="uid://d0mmdss13gwg" path="res://scenes/world objects/wall.tscn" id="2_agdnl"]
 
 [node name="test_scene" type="Node2D"]

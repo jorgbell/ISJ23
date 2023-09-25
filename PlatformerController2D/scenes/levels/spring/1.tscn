@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgj464ol7h1x0"]
+
+[ext_resource type="PackedScene" uid="uid://d0mmdss13gwg" path="res://scenes/world objects/wall.tscn" id="1_5cfsw"]
+[ext_resource type="PackedScene" uid="uid://c6gex0xy3o086" path="res://scenes/world objects/satelite.tscn" id="2_u3yii"]
+[ext_resource type="PackedScene" uid="uid://dxqcxm5p8texj" path="res://scenes/world objects/ground_spring.tscn" id="3_io6mg"]
+
+[node name="Level 1" type="Node"]
+
+[node name="wall" parent="." instance=ExtResource("1_5cfsw")]
+position = Vector2(-1890, -328)
+scale = Vector2(3.47252, 3.53222)
+
+[node name="wall2" parent="." instance=ExtResource("1_5cfsw")]
+position = Vector2(1895, -303)
+scale = Vector2(3.47252, 3.53222)
+
+[node name="satelite" parent="." instance=ExtResource("2_u3yii")]
+position = Vector2(-186, -181)
+
+[node name="ground" parent="." instance=ExtResource("3_io6mg")]
+scale = Vector2(3.6, 1)
+
+[node name="ground2" parent="." instance=ExtResource("3_io6mg")]
+position = Vector2(-1209, -418)
+scale = Vector2(1.37462, 1.62449)

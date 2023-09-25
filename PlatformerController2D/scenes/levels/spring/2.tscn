@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbyyigf3ym1rn"]
+
+[ext_resource type="PackedScene" uid="uid://c6gex0xy3o086" path="res://scenes/world objects/satelite.tscn" id="1_lxoao"]
+[ext_resource type="PackedScene" uid="uid://dxqcxm5p8texj" path="res://scenes/world objects/ground_spring.tscn" id="1_ww7k5"]
+[ext_resource type="PackedScene" uid="uid://d0mmdss13gwg" path="res://scenes/world objects/wall.tscn" id="2_py83j"]
+
+[node name="Level2" type="Node"]
+
+[node name="satelite" parent="." instance=ExtResource("1_lxoao")]
+position = Vector2(1840, -60)
+rotation = -0.759218
+
+[node name="ground" parent="." instance=ExtResource("1_ww7k5")]
+position = Vector2(-64, 164)
+scale = Vector2(4.88, 4.68)
+
+[node name="ground3" parent="." instance=ExtResource("1_ww7k5")]
+position = Vector2(-409, -234)
+scale = Vector2(0.869554, 1.91785)
+
+[node name="ground4" parent="." instance=ExtResource("1_ww7k5")]
+position = Vector2(261, -237)
+scale = Vector2(0.189552, 1.91785)
+
+[node name="ground5" parent="." instance=ExtResource("1_ww7k5")]
+position = Vector2(581, -237)
+scale = Vector2(0.189552, 1.91785)
+
+[node name="ground6" parent="." instance=ExtResource("1_ww7k5")]
+position = Vector2(921, -237)
+scale = Vector2(0.189552, 1.91785)
+
+[node name="ground8" parent="." instance=ExtResource("1_ww7k5")]
+position = Vector2(1194, -211)
+scale = Vector2(0.189552, 0.597851)
+
+[node name="ground12" parent="." instance=ExtResource("1_ww7k5")]
+position = Vector2(1520, -262)
+scale = Vector2(0.189552, 0.597851)
+
+[node name="ground2" parent="." instance=ExtResource("1_ww7k5")]
+position = Vector2(-1644, -244)
+scale = Vector2(0.932499, 1.62415)
+
+[node name="wall2" parent="." instance=ExtResource("2_py83j")]
+position = Vector2(-2580, -319)
+
+[node name="wall3" parent="." instance=ExtResource("2_py83j")]
+position = Vector2(2385, -314)

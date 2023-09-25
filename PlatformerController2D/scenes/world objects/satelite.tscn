@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6gex0xy3o086"]
+
+[ext_resource type="Texture2D" uid="uid://cafqehpvtfp5i" path="res://resources/props/sat_wing.png" id="1_an2yd"]
+[ext_resource type="Texture2D" uid="uid://cys6navdq5qpe" path="res://resources/props/sat_body.png" id="2_ggnxr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7v2uu"]
+size = Vector2(383.836, 133.11)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8aei"]
+radius = 94.6415
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfpyq"]
+size = Vector2(308.018, 137.301)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7atip"]
+size = Vector2(186.609, 31.1947)
+
+[node name="satelite" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-106, -252)
+rotation = 0.534071
+texture = ExtResource("1_an2yd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(51.5252, 184.713)
+shape = SubResource("RectangleShape2D_7v2uu")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-20.0001, 230)
+rotation = -3.38594
+texture = ExtResource("2_ggnxr")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D3"]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D3/StaticBody2D"]
+position = Vector2(-153.37, 159.566)
+rotation = 3.14159
+scale = Vector2(0.887739, -0.816086)
+shape = SubResource("CircleShape2D_s8aei")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(410, 240)
+rotation = 3.12146
+scale = Vector2(1, 1)
+texture = ExtResource("1_an2yd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D2"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D"]
+position = Vector2(78.253, 166.872)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_qfpyq")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D"]
+position = Vector2(-62.3237, 164.495)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7atip")
