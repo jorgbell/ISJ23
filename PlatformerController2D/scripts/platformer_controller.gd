@@ -14,6 +14,9 @@ signal hit_ground()
 ## Name of input action to jump.
 @export var input_jump : String = "jump"
 
+@onready var ap = $AnimationPlayer
+@onready var sprite = $icon
+
 
 const DEFAULT_MAX_JUMP_HEIGHT = 150
 const DEFAULT_MIN_JUMP_HEIGHT = 60
@@ -152,6 +155,11 @@ func _input(_event):
 
 
 func _physics_process(delta):
+	var horizontal_direction = Input.get_axis("move_left", "move_right")
+	if horizontal_direction != 0:
+		sprite.flip_h = (horizontal_direction == -1)
+	
+		
 	if is_coyote_timer_running() or current_jump_type == JumpType.NONE:
 		jumps_left = max_jump_amount
 	if is_feet_on_ground() and current_jump_type == JumpType.NONE:
@@ -181,7 +189,20 @@ func _physics_process(delta):
 	
 	_was_on_ground = is_feet_on_ground()
 	move_and_slide()
-
+	
+	update_anims(horizontal_direction)
+	
+	
+func update_anims(horizontal_direction):
+	if is_feet_on_ground():
+		if horizontal_direction == 0:
+			ap.play("idle")
+		else: 
+			ap.play("run")
+	elif velocity.y != 0:
+		ap.play("jump") 	
+	else:
+		ap.play("idle")
 
 ## Use this instead of coyote_timer.start() to check if the coyote_timer is enabled first
 func start_coyote_timer():

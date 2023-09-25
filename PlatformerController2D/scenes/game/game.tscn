@@ -15,7 +15,7 @@ script = ExtResource("1_ub7n1")
 position = Vector2(-10, -640)
 
 [node name="Camera2D2" type="Camera2D" parent="character"]
-position = Vector2(30, -89)
+position = Vector2(3, -60)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.205
 drag_vertical_enabled = true
